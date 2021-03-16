@@ -3,7 +3,7 @@
 
 __copyright__ = """
 
-    Copyright 2020 Samapriya Roy
+    Copyright 2021 Samapriya Roy
 
     Permission is hereby granted, free of charge,
     to any person obtaining a copy of this software
@@ -45,7 +45,7 @@ import sys
 import glob
 from bs4 import BeautifulSoup
 
-MAIN_URL = "https://data.humdata.org/organization/facebook?res_format=ZIP&res_format=zipped%20geotif&res_format=zipped%20geotiff&res_format=zipped%20goetiff&q=&ext_page_size=250"
+MAIN_URL = "https://data.humdata.org/m/organization/facebook?res_format=GeoTIFF&ext_page_size=250"
 
 
 i = 1  # Set a counter
@@ -90,11 +90,11 @@ def lk(url, destination):
     for link in links:
         try:
             ziplink = link.get("href")
-            if ziplink.split("/")[-1].startswith("population") and not ziplink.split(
+            if "population" in ziplink.split("/")[-1] and not ziplink.split(
                 "/"
-            )[-1].endswith("csv.zip"):
+            )[-1].endswith("csv.zip") and ziplink.endswith(".zip"):
                 sub.append(ziplink)
-                url = "https://data.humdata.org" + ziplink
+                url = "https://data.humdata.org{}".format(ziplink)
                 downonly(url, destination)
         except Exception as e:
             pass

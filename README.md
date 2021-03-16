@@ -72,6 +72,9 @@ python hdxpop.py -h
 
 ## Changelog
 
+### v0.0.4
+- Changes to search URL and fuzzy search to look for overall population datasets.
+
 ### v0.0.3
 - Changes to search URL to include geotif, zipped only, goetiff and geotiff keyword filters.
 
