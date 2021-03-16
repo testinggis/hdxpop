@@ -1,6 +1,6 @@
 # hdxpop
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3735435.svg)](https://doi.org/10.5281/zenodo.3735435)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4606954.svg)](https://doi.org/10.5281/zenodo.4606954)
 [![Downloads](https://pepy.tech/badge/hdxpop/month)](https://pepy.tech/project/hdxpop/month)
 ![CI hdxpop](https://github.com/samapriya/hdxpop/workflows/CI%20hdxpop/badge.svg)
 
@@ -9,8 +9,8 @@ Simple tool to download High Resolution Population Density Maps from Humanitaria
 ## [For usage go to the medium article](https://medium.com/@samapriyaroy/community-datasets-in-google-earth-engine-an-experiment-b72daa474819)
 
 ```
-Samapriya Roy. (2020, March 31). samapriya/hdxpop: hdxpop: Simple tool to download High Resolution Population Density Maps from
-Humanitarian Data Exchange (Version 0.0.3). Zenodo. http://doi.org/10.5281/zenodo.3735435
+Samapriya Roy. (2021, March 16). samapriya/hdxpop: hdxpop: Simple tool to download High Resolution Population Density Maps from
+Humanitarian Data Exchange (Version 0.0.4). Zenodo. http://doi.org/10.5281/zenodo.4606954
 ```
 
 ## Table of contents
