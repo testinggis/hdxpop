@@ -13,7 +13,7 @@ Samapriya Roy. (2021, March 16). samapriya/hdxpop: hdxpop: Simple tool to downlo
 Humanitarian Data Exchange (Version 0.0.4). Zenodo. http://doi.org/10.5281/zenodo.4606954
 ```
 
-## Table of contents
+## Table of contents (TOI)
 * [Prerequisites](#prerequisites)
 * [Installing hdxpop](#installing-hdxpop)
 * [Using without install](#using-without-install)
