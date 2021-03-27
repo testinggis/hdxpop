@@ -1,0 +1,52 @@
+
+name: fork-updater
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update-badges:
+    name: Update Badges
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: check remote and origin
+        run: git remote -v
+      - name: add upstream
+        run:  git remote add upstream https://github.com/samapriya/hdxpop.git
+      - name: check remote and origin
+        run: git remote -v
+      - name: fetch upstream
+        run: git fetch upstream
+      - name: pull master
+        run: git pull upstream master
+#       - name: Git merge and update to latest master
+#         run: |
+#           git config --local user.email "action@github.com"
+#           git config --local user.name "GitHub Action"
+#           git merge upstream/master master --allow-unrelated-histories
+#       - name: Get the Numbers
+#         run: |
+#           echo "CODE_LINES=$(scripts/cloc.sh --loc)" >> $GITHUB_ENV
+#           echo "COMMENT_LINES=$(scripts/cloc.sh --percentage)%" >> $GITHUB_ENV
+#       - name: Create Lines-of-Code-Badge
+#         uses: schneegans/dynamic-badges-action@v1.0.0
+#         with:
+#           auth: ${{ secrets.GIST_SECRET }}
+#           gistID: c346f59f1bc7db6bb272215e8c8ffaa8
+#           filename: loc.json
+#           label: Lines of Code
+#           message: ${{ env.CODE_LINES }}
+#           color: lightgrey
+#       - name: Create Comments-Badge
+#         uses: schneegans/dynamic-badges-action@v1.0.0
+#         with:
+#           auth: ${{ secrets.GIST_SECRET }}
+#           gistID: c346f59f1bc7db6bb272215e8c8ffaa8
+#           filename: comments.json
+#           label: Comments
+#           message: ${{ env.COMMENT_LINES }}
+#           color: green
